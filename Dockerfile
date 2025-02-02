@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y \
  && rm -rf /var/lib/apt/lists/*
 
 #  Create a directory for your model weights (we will download them at runtime or build time)
-RUN mkdir /app/model
+RUN mkdir -p /app/model
 WORKDIR /app
 
 #  Copy your inference script, which starts a web server (Flask/FastAPI).
